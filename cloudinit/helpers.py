@@ -282,7 +282,7 @@ class ConfigMerger(object):
         cfgs.extend(self._get_datasource_configs())
         if self._base_cfg:
             cfgs.append(self._base_cfg)
-        return util.mergemanydict(cfgs)
+        return util.mergemanydict(cfgs, reverse=True)
 
     @property
     def cfg(self):
